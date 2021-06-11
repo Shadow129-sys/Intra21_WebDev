@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+:root {
+	--col1: #000000;
+	--col2: #ff0000;
+	--col3: #181818;
+	--col4: rgba(88, 88, 88, 0.5);
+	--col5: rgba(100, 17, 17, 0.62);
+	--col6: #d8d8d8;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -5,5 +14,125 @@
 }
 
 body {
-	background-color: aquamarine;
+	background-image: linear-gradient(to top left, rgba(100, 17, 17), #181818);
+	width: 100%;
+	height: 100vh;
+}
+
+.nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	height: 5em;
+	border: 1px solid white;
+	width: 95vw;
+	margin-inline: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: box-shadow 0.6s ease;
+	z-index: 0;
+}
+
+.nav-bar li {
+	color: #fff;
+	font-size: 1.95rem;
+	font-family: "Poppins", sans-serif;
+}
+
+.gx {
+	font-size: 1rem;
+	width: 3.5em;
+	height: 3.5em;
+	z-index: 5;
+	transition: all 0.6s ease;
+}
+
+.head {
+	width: 100%;
+	height: 7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*border: 1px solid white;*/
+}
+
+.head > p {
+	font-size: 2rem;
+	color: #fff;
+	padding-inline: 0.05em;
+	font-family: "Poppins", sans-serif;
+}
+
+.head > .red {
+	color: var(--col2);
+}
+
+.body {
+	width: 100%;
+	/*border: 1px solid white;*/
+	display: flex;
+	justify-content: space-around;
+	margin-top: 3.5em;
+	opacity: 0.8;
+}
+
+.section {
+	position: relative;
+	width: 33.333%;
+	/*border: 1px solid white;*/
+}
+
+.text-head {
+	width: 100%;
+	font-size: 1.2rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	letter-spacing: 2px;
+	/*border: 1px solid white;*/
+	padding-block: 1em;
+}
+
+.text-body {
+	font-family: "Poppins", sans-serif;
+	color: #fff;
+	font-size: 0.85rem;
+	padding-inline: 2em;
+}
+
+.first {
+	border-right: 2px solid var(--col2);
+}
+
+.last {
+	border-left: 2px solid var(--col2);
+}
+
+.nav-bar:hover {
+	box-shadow: 0 0 1em 1em rgba(100, 17, 17);
+}
+
+.gx:hover {
+	transform: scale(1.2) translateY(-10px);
+	pointer-events: all;
+}
+
+.nav-bar .nav-text {
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 0.2em;
+	transition: all 0.6s ease;
+}
+
+.nav-bar:hover .nav-text {
+	transform: skewX(-15deg);
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 0 1em 0.5em rgba(100, 17, 17);
+}
+
+.nav-bar:hover .gx {
+	transform: translateY(10px);
 }
